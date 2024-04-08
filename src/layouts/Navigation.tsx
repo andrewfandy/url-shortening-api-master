@@ -4,9 +4,9 @@ import ButtonNoBox from "../components/ButtonNoBox";
 
 
 
- 
+
 export default function Navigation() {
-    const[isMobile, setIsMobile] = useState(true);
+    const [isMobile, setIsMobile] = useState(true);
 
     const handleWindowWidth = () => {
         const userWidthSize = window.innerWidth;
@@ -23,18 +23,19 @@ export default function Navigation() {
     }, [])
 
 
-    return(
-        <div className="flex justify-between bg-red-500 px-5  py-3 w-full">
+    return (
+        <div className="flex justify-between px-5  py-3 w-full">
             {
                 !isMobile ?
-                <>
-                    <a className="text-3xl font-bold" href="#">Shortly</a>
-                    <ButtonNoBox text="test"/>
-                    <ButtonNoBox text="test"/>
-                    <ButtonNoBox text="test"/>
-                </>
-                :
-                <HamburgerMenu />
+                    <>
+                        <a className="text-3xl font-bold" href="#">Shortly</a>
+                        <ButtonNoBox text={["Features", "Pricing", "Resource"]} />
+                    </>
+                    :
+                    <>
+                        <a className="text-3xl font-bold" href="#">Shortly</a>
+                        <HamburgerMenu />
+                    </>
             }
         </div>
     )
