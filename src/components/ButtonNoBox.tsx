@@ -1,19 +1,12 @@
-type ButtonNoBoxProps = {
-    text: string[]
+interface ButtonNoBoxProps {
+  text: string;
 }
 export default function ButtonNoBox(props: ButtonNoBoxProps) {
-    return (
-        <ul className="">
-            {
-                props.text.map((item) => {
-
-                    return (
-                        <li>
-                            <a className="text-center font-bold hover:text-primary-dark-violet text-neutral-gray" href="#">{item}</a>
-                        </li>
-                    )
-                })
-            }
-        </ul>
-    )
+  return (
+    <div className="flex items-center justify-center">
+      <span className="text-center font-bold text-neutral-gray-violet hover:text-primary-dark-violet">
+        {props.text}
+      </span>
+    </div>
+  );
 }
