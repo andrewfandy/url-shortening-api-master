@@ -1,12 +1,8 @@
-import Navigation from "./layouts/Navigation"
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routers/router";
 
 function App() {
-
-  return (
-    <main className="font-poppins w-full h-full">
-      <Navigation />
-    </main>
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
