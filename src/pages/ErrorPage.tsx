@@ -1,5 +1,5 @@
 import { Link, useRouteError } from "react-router-dom";
-import ButtonBox from "../components/ButtonBox";
+import ButtonBox from "../components/buttons/ButtonBox";
 
 export default function ErrorPage() {
   const error = useRouteError() as Error;

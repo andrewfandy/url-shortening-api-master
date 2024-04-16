@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { NavBar } from "../components/NavBar";
+import { NavBar } from "../components/navbar/NavBar";
 import { useState, useEffect } from "react";
 
 export default function Layout() {
@@ -22,7 +22,7 @@ export default function Layout() {
 
   return (
     <>
-      <main className="flex flex-col justify-center items-center font-poppins w-full h-full relative">
+      <main className="relative flex h-full w-full flex-col items-center justify-center font-poppins">
         <NavBar isMobile={isMobile} />
         <Outlet />
       </main>
