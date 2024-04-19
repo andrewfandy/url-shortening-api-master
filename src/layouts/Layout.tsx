@@ -24,6 +24,7 @@ export default function Layout() {
     <>
       <main className="relative flex h-full w-full flex-col items-center justify-center font-poppins">
         <NavBar isMobile={isMobile} />
+
         <Outlet />
       </main>
     </>
